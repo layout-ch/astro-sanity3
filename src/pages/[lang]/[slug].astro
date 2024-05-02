@@ -1,0 +1,22 @@
+---
+import { sanityClient } from "sanity:client";
+
+export async function getStaticPaths() {
+    const pages = await sanityClient.fetch(
+        `*[_type=='page' && slug.current != '/']`,
+    );
+
+    return pages.map((page: any) => {
+        console.log(page);
+
+        return {
+            params: { lang: page.language, slug: page.slug.current },
+            props: { title: page.title },
+        };
+    });
+}
+
+const { title } = Astro.props;
+---
+
+<h1>{title}</h1>
