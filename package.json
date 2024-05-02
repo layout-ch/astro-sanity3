@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/react": "^3.3.1",
+    "@astrojs/vercel": "^7.5.4",
     "@astrolicious/i18n": "^0.4.2",
     "@sanity/astro": "^2.2.1",
     "@sanity/client": "^6.15.20",
