@@ -21,5 +21,4 @@ export default defineConfig({
     useCdn: false,
     studioBasePath: "/admin"
   }), react()]
-
 });

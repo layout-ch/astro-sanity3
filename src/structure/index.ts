@@ -19,5 +19,5 @@ export const structure: StructureResolver = (S, context) =>
                 icon: HomeIcon,
             }),
             S.divider(),
-            // ...filteredDocumentListItems({ S, context }),
+            ...filteredDocumentListItems({ S, context }),
         ]);
