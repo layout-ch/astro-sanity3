@@ -1,3 +1,14 @@
 ---
+import { getLocale } from "i18n:astro";
+import { sanityClient } from "sanity:client";
 
+const language = getLocale();
+
+const page = await sanityClient.fetch(
+    `*[_type=='home' && language=='${language}'][0]`,
+);
+
+console.log(page);
 ---
+
+<h1>{page.title}</h1>
